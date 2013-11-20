@@ -1,0 +1,125 @@
+.doctor {
+    display:block;
+    background: #dddddd; /* Old browsers */
+    background: -moz-linear-gradient(top,  #dddddd 0%, #bbbbbb 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#dddddd), color-stop(100%,#bbbbbb)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #dddddd 0%,#bbbbbb 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #dddddd 0%,#bbbbbb 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #dddddd 0%,#bbbbbb 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #dddddd 0%,#bbbbbb 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dddddd', endColorstr='#bbbbbb',GradientType=0 ); /* IE6-9 */
+    box-sizing: border-box;
+    border:1px solid #eeeeee;
+    -webkit-box-shadow:0 6px 6px #777;
+    -moz-box-shadow:0 6px 6px #777;
+    -o-box-shadow:0 6px 6px #777;
+    -ms-box-shadow:0 6px 6px #777;
+    box-shadow:0 6px 6px #777;
+    -webkit-border-radius:12px;
+    -moz-border-radius:12px;
+    -o-border-radius:12px;
+    -ms-border-radius:12px;
+    border-radius:12px;
+    margin:0 0 12px;
+    padding:6px 0;
+    cursor:hand;
+    cursor:pointer;
+}
+
+.doctor:last-of-type{
+    margin:0;
+}
+
+.doctor:hover {
+    -webkit-box-shadow:0 0 12px #06f;
+    -moz-box-shadow:0 0 12px #06f;
+    -o-box-shadow:0 0 12px #06f;
+    -ms-box-shadow:0 0 12px #06f;
+    box-shadow:0 0 12px #06f;
+ }
+
+.doctor:active {
+    background: #bbbbbb; /* Old browsers */
+    background: -moz-linear-gradient(top,  #bbbbbb 0%, #dddddd 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#bbbbbb), color-stop(100%,#dddddd)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #bbbbbb 0%,#dddddd 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #bbbbbb 0%,#dddddd 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #bbbbbb 0%,#dddddd 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #bbbbbb 0%,#dddddd 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bbbbbb', endColorstr='#dddddd',GradientType=0 ); /* IE6-9 */
+    border:1px solid #999999;
+    -webkit-box-shadow:inset 0 0 12px #777;
+    -moz-box-shadow:inset 0 0 12px #777;
+    -o-box-shadow:inset 0 0 12px #777;
+    -ms-box-shadow:inset 0 0 12px #777;
+    box-shadow:inset 0 0 12px #777;
+}
+
+.doctor h1 {
+    margin:0 6px;
+    font-size:1.4em;
+    color:#111;
+}
+
+.doctor .info {
+    list-style:none;
+    margin:0 6px;
+    padding:0;
+    color:#666;
+}
+
+.doctor ul.info li {
+    float:left;
+    margin:0 12px 0 0;
+}
+
+.doctor ul.info li:last-of-type {
+    margin:0;
+}
+
+.doctor ul.info li:before {
+    background:#666;
+    -webkit-border-radius:6px;
+    -moz-border-radius:6px;
+    -o-border-radius:6px;
+    -ms-border-radius:6px;
+    border-radius:6px;
+    color:#eee;
+    margin-right:6px;
+    padding:3px;
+}
+
+.doctor ul.info li.address:before {
+    content: "A";
+}
+
+.doctor ul.info li.geo:before {
+    content: "G";
+}
+
+.doctor ul.info li.practice:before {
+    content: "P";
+}
+
+/*
+Google Maps
+*/
+#map-canvas {
+    position:relative;
+    height:480px;
+    box-sizing: border-box;
+    border:6px solid #999;
+}
+/*#map-canvas:before {
+    z-index:2;
+    position:absolute;
+    height:480px;
+    width:100%;
+    display:block;
+    -webkit-box-shadow:inset 0 0 12px #777;
+    -moz-box-shadow:inset 0 0 12px #777;
+    -o-box-shadow:inset 0 0 12px #777;
+    -ms-box-shadow:inset 0 0 12px #777;
+    box-shadow:inset 0 0 12px #777;
+    content: " ";
+}*/
