@@ -65,7 +65,9 @@ function initCanvas(){
  */
 function animateCanvas(){
 
-    
+    //Clear the canvas
+    _canvasContext.fillStyle = "rgba(0,0,0,1)";
+    _canvasContext.fillRect(0,0,_canvas.width, _canvas.height);
 
     //Loop through Particles Array
     var l = _particlesArray.length, particle;
@@ -86,14 +88,21 @@ function animateCanvas(){
  * Properties + Methods (functions)
  * Actions: Setup + Update + ReDraw
  */
-function Particle(px, py, psize){
+function Particle(px, py, psize, velX, velY){
     this.px = px;
     this.py = py;
     this.psize = psize;
+    this.velX = velX;
+    this.velY = velY;
 
     this.update = function(){
-        this.px += 5;
-        this.py += 5;
+        //ALGORITHM 1
+        this.px += 5*this.velX;
+        this.py += 5*this.velY;
+
+        //ALGORITHM 2 SNOW STORM
+        /*this.px += 5+this.velX;
+        this.py += 5+this.velY;*/
     }
 
     this.drawOnCanvasContext = function(context){
@@ -115,11 +124,13 @@ function UnitTestParticles(){
     if(_particlesArray == null)
         _particlesArray = [];//Like new Array();
 
-    var particle, px, py, psize = 4;
+    var particle, px, py, psize = 4, velX, velY;
     for(var i=0;i<1000;i++){
         px = Math.random()*_canvas.width;
         py = Math.random()*_canvas.height;
-        particle = new Particle(px, py, psize);//Create a new Particle --> object
+        velX = Math.random()*8-4;
+        velY = Math.random()*8-4;
+        particle = new Particle(px, py, psize, velX, velY);//Create a new Particle --> object
 
         _particlesArray.push(particle);//Add particle to existing array
     }
