@@ -28,3 +28,45 @@
     ----------
     http://jsonlint.com/
 */
+
+var URLPORTFOLIO = "data/portfolio.json";
+var _portfolioitems;
+
+function loadPortfolio(){
+    $.ajax({
+        type:'GET',
+        url:URLPORTFOLIO,
+        dataType:'json',
+        contentType:'application/json',
+        success:function(data){
+            _portfolioitems = data.portfolioitems;
+            vizPortfolio();
+        },
+        error:function(xhr, status, error){
+            console.log(xhr.responseText);
+
+        }
+    });
+}
+
+function vizPortfolio(){
+    var html = ''
+    $.each(_portfolioitems, function(key, item){
+        html += ''
+        + '<h3>' + item.title + '</h3>'
+        + '<div>'
+        + '<p>' + item.description + '</p>'
+        + '<p>' + item.body + '</p>'
+        + '</div>';
+    });
+    html += '</ul>';
+
+    $('#portfolio').html(html);//Assign the value of html object to speciwfied html element --> #portfolio
+    $('#portfolio').accordion();//Accordion Jquery UI
+
+    $('#portfolioamount span').html(_portfolioitems.length);//show the length in a visual container
+}
+
+(function(){
+  loadPortfolio();
+})();
