@@ -48,12 +48,18 @@ function initCanvas(){
             canvas.height = $(window).height();
             canvasContext = canvas.getContext('2d');//Get the 2d Context from the canvas object and assign to variable canvasContext
             //Start Animate the canvas via requestAnimFrame method (custom)
-            var particle, rx, ry;
-            for(var i=0;i<1;i++){
+            var particle, rx, ry, velX, velY, size, cr, cg, cb;
+            for(var i=0;i<1000;i++){
                 rx = Math.random()*canvas.width;
                 ry = Math.random()*canvas.height;
+                velX = Math.random()*8-4;
+                velY = Math.random()*8-4;
+                size = 2+Math.random()*2;
+                cr = Math.round(Math.random()*255);
+                cg = Math.round(Math.random()*255);
+                cb = Math.round(Math.random()*255);
 
-                particle = new Particle(i, rx, ry, 10);
+                particle = new Particle(i, rx, ry, size, velX, velY, cr, cg, cb);
 
                 if(_particlesArray == null)
                     _particlesArray = [];
@@ -81,6 +87,9 @@ function animateCanvas(){
         //_particlesArray = new Array();
     }
 
+    //Clear the canvas
+    canvasContext.fillRect(0, 0, canvas.width, canvas.height);
+
     //Loop through the Particles Array
     var particle;
     for(var i=0;i<_particlesArray.length;i++){
@@ -88,7 +97,6 @@ function animateCanvas(){
         particle.update();
         particle.drawOnCanvasContext(canvasContext);
     }
-
 
     //Start Animate again
     requestAnimFrame(animateCanvas);
@@ -99,24 +107,29 @@ function animateCanvas(){
     ======================================
     Properties, methods (functions)
  */
-function Particle(id, x, y, size){
+function Particle(id, x, y, size, velX, velY, cr, cg, cb){
     this.id = id;
     this.x = x;
     this.y = y;
     this.size = size;
+    this.velX = velX;
+    this.velY = velY;
+    this.cr = cr;
+    this.cg = cg;
+    this.cb = cb;
 
     this.update = function(){
-        this.x += 5;
-        this.y += 5;
+        this.x += this.velX;
+        this.y += this.velY;
     }
 
     this.drawOnCanvasContext = function(context){
         context.save();
 
         context.beginPath();
-        context.lineWidth = 2;
-        context.strokeStyle = "rgba(255,255,255,0.26";
-        context.fillStyle = "#E74C3C"
+        context.lineWidth = 1;
+        context.strokeStyle = 'rgba(' + cr + ',' + cg + ',' + cb + ',0.26)';
+        context.fillStyle = 'rgba(' + cr + ',' + cg + ',' + cb + ',0.26)';
         context.arc(this.x, this.y, this.size, 0, 2*Math.PI, true);
         context.fill();
         context.stroke();
