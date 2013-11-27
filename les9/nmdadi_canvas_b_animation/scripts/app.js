@@ -18,7 +18,7 @@
     ========================
     * Extend the scope --> applicable with JS Files
 */
-var _canvas, _canvasContext;
+var _canvas, _canvasContext, _particlesArray;
 
 /*
     Declare My Own Nice Animation Frame
@@ -65,6 +65,15 @@ function initCanvas(){
  */
 function animateCanvas(){
 
+    
+
+    //Loop through Particles Array
+    var l = _particlesArray.length, particle;
+    for(var i=0;i<l;i++){
+        particle = _particlesArray[i];
+        particle.update();
+        particle.drawOnCanvasContext(_canvasContext);//Draw on 2d Context of canvas
+    }
 
     //Do a new animation --> 1/60s
     requestAnimFrame(animateCanvas);
@@ -83,7 +92,8 @@ function Particle(px, py, psize){
     this.psize = psize;
 
     this.update = function(){
-
+        this.px += 5;
+        this.py += 5;
     }
 
     this.drawOnCanvasContext = function(context){
@@ -101,12 +111,17 @@ function Particle(px, py, psize){
  * Test the Particles
  */
 function UnitTestParticles(){
+
+    if(_particlesArray == null)
+        _particlesArray = [];//Like new Array();
+
     var particle, px, py, psize = 4;
     for(var i=0;i<1000;i++){
         px = Math.random()*_canvas.width;
         py = Math.random()*_canvas.height;
-        particle = new Particle(px, py, psize);
-        particle.drawOnCanvasContext(_canvasContext);
+        particle = new Particle(px, py, psize);//Create a new Particle --> object
+
+        _particlesArray.push(particle);//Add particle to existing array
     }
 }
 
