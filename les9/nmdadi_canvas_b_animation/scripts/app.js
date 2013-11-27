@@ -18,7 +18,7 @@
     ========================
     * Extend the scope --> applicable with JS Files
 */
-var _canvas, _canvasContext, _particlesArray;
+var _canvas, _canvasContext, _particlesArray, pId = 0, fId = 0;
 
 /*
     Declare My Own Nice Animation Frame
@@ -51,7 +51,7 @@ function initCanvas(){
             //Execute a unit test for particles
             //UnitTestParticles()
             //Create new Firework
-            new Firework();
+            //new Firework();
             //Call function: window.requestAnimFrame
             //Do a new animation --> 1/60s
             requestAnimFrame(animateCanvas);
@@ -73,6 +73,8 @@ function animateCanvas(){
     _canvasContext.fillRect(0,0,_canvas.width, _canvas.height);
     _canvasContext.globalCompositeOperation = "lighter";
 
+    if(_particlesArray == null)
+        _particlesArray = [];//Like new Array();
     //Loop through Particles Array
     var l = _particlesArray.length, particle;
     for(var i=0;i<l;i++){
@@ -125,12 +127,12 @@ function Particle(px, py, psize, velX, velY, cr, cg, cb){
          this.py += this.velY;*/
 
         //ALGORITHM 5
-        /*this.px += (this.velX/this.velY)/t;
-        this.py += this.velY*this.velX*t;*/
+        this.px += (this.velX/this.velY)/t;
+        this.py += this.velY*this.velX*t;
 
         //ALGORITHM 6
-        this.px += this.velX;
-        this.py += this.velY+9.81*t*0.6;
+        /*this.px += this.velX;
+        this.py += this.velY+9.81*t*0.6;*/
     }
 
     this.drawOnCanvasContext = function(context){
@@ -172,7 +174,14 @@ function Firework(){
         particle = new Particle(fx, fy, psize, velX, velY, cr, cg, cb);//Create a new Particle --> object
 
         _particlesArray.push(particle);//Add particle to existing array
+
+        pId++;
     }
+
+    fId++;
+
+    $('#nfireworks span').html(fId + ' fireworks');
+    $('#nparticles span').html(pId + ' particles');
 }
 
 
@@ -212,6 +221,13 @@ function UnitTestParticles(){
             _canvas.width = _canvas.clientWidth;
             _canvas.height = _canvas.clientHeight;
         }
+        return false;
+    });
+
+    //Listen to click event shoot firework
+    $('#sfirework').click(function(e){
+        e.preventDefault();
+        new Firework();
         return false;
     });
 
