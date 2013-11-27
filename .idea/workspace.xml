@@ -6,7 +6,7 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/index.html" changelist="cd0bdc94-f423-42b5-972c-7ca073a85b71" time="1385557003653" ignored="false" />
     <file path="/students.json" changelist="cd0bdc94-f423-42b5-972c-7ca073a85b71" time="1385541115558" ignored="false" />
-    <file path="/app.js" changelist="cd0bdc94-f423-42b5-972c-7ca073a85b71" time="1385562977661" ignored="false" />
+    <file path="/app.js" changelist="cd0bdc94-f423-42b5-972c-7ca073a85b71" time="1385563397088" ignored="false" />
     <file path="/app.css" changelist="cd0bdc94-f423-42b5-972c-7ca073a85b71" time="1385558039662" ignored="false" />
     <file path="/portfolio.json" changelist="cd0bdc94-f423-42b5-972c-7ca073a85b71" time="1385555500431" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -49,10 +49,19 @@
       <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/les9/nmdadi_canvas_b_animation/scripts/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="22" selection-start="2106" selection-end="2106" vertical-scroll-proportion="0.20554855">
+            <state line="171" column="69" selection-start="5188" selection-end="5188" vertical-scroll-proportion="0.6809584">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/les9/nmdadi_canvas_animation/scripts/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="119" column="4" selection-start="3532" selection-end="3659" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -232,6 +241,46 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nmdad-i" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nmdad-i" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="les9" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nmdadi_canvas_animation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nmdad-i" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nmdad-i" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="les9" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nmdadi_canvas_animation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -369,15 +418,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/les9/nmdadi_canvas_animation/scripts/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="138" column="23" selection-start="4261" selection-end="4261" vertical-scroll-proportion="0.92686003">
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/les9/nmdadi_canvas_animation/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="46" column="22" selection-start="3123" selection-end="3123" vertical-scroll-proportion="0.60886574">
@@ -436,9 +476,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/les9/nmdadi_canvas_animation/scripts/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="119" column="4" selection-start="3532" selection-end="3659" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/les9/nmdadi_canvas_b_animation/scripts/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="22" selection-start="2106" selection-end="2106" vertical-scroll-proportion="0.20554855">
+        <state line="171" column="69" selection-start="5188" selection-end="5188" vertical-scroll-proportion="0.6809584">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>

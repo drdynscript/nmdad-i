@@ -92,7 +92,7 @@ function animateCanvas(){
  * Properties + Methods (functions)
  * Actions: Setup + Update + ReDraw
  */
-function Particle(px, py, psize, velX, velY){
+function Particle(px, py, psize, velX, velY, cr, cg, cb){
     this.px = px;
     this.py = py;
     this.psize = psize;
@@ -100,6 +100,9 @@ function Particle(px, py, psize, velX, velY){
     this.velY = velY;
     this.startTime = new Date();//Snapshot in time --> current time
     this.t = 0;//Time difference between current time and start time
+    this.cr = cr;
+    this.cg = cg;
+    this.cb = cb;
 
     this.update = function(currentTime){
         //Time difference
@@ -132,9 +135,15 @@ function Particle(px, py, psize, velX, velY){
 
     this.drawOnCanvasContext = function(context){
         context.beginPath();
-        context.fillStyle = "rgba(22,160,133,0.9)";
+        context.fillStyle = 'rgba(' + cr + ',' + cg + ',' + cb + ',0.26)';
         context.arc(this.px, this.py, this.psize, 0, Math.PI*2, true);
         context.fill();
+        //Doing some weird stuff
+        context.strokeStyle = 'rgba(' + cr + ',' + cg + ',' + cb + ',0.26)';
+        context.moveTo(0,0);
+        context.lineTo(this.px,this.py);
+        context.arc(this.px, this.py, this.psize*this.psize, 0, Math.PI*2, true);
+        context.stroke();
         context.closePath();
     }
 }
@@ -149,6 +158,9 @@ function Firework(){
     //Ignition point
     var fx = Math.random()*_canvas.width;
     var fy = Math.random()*_canvas.height;
+    var cr = Math.round(Math.random()*255);
+    var cg = Math.round(Math.random()*255);
+    var cb = Math.round(Math.random()*255);
 
     if(_particlesArray == null)
         _particlesArray = [];//Like new Array();
@@ -157,7 +169,7 @@ function Firework(){
     for(var i=0;i<50+Math.random()*450;i++){
         velX = Math.random()*8-4;
         velY = Math.random()*8-4;
-        particle = new Particle(fx, fy, psize, velX, velY);//Create a new Particle --> object
+        particle = new Particle(fx, fy, psize, velX, velY, cr, cg, cb);//Create a new Particle --> object
 
         _particlesArray.push(particle);//Add particle to existing array
     }
