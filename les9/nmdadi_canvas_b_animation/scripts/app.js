@@ -49,7 +49,9 @@ function initCanvas(){
             _canvas.width = _canvas.clientWidth;
             _canvas.height = _canvas.clientHeight;
             //Execute a unit test for particles
-            UnitTestParticles();
+            //UnitTestParticles()
+            //Create new Firework
+            new Firework();
             //Call function: window.requestAnimFrame
             //Do a new animation --> 1/60s
             requestAnimFrame(animateCanvas);
@@ -66,8 +68,10 @@ function initCanvas(){
 function animateCanvas(){
 
     //Clear the canvas
+    _canvasContext.globalCompositeOperation = "source-over";
     _canvasContext.fillStyle = "rgba(0,0,0,1)";
     _canvasContext.fillRect(0,0,_canvas.width, _canvas.height);
+    _canvasContext.globalCompositeOperation = "lighter";
 
     //Loop through Particles Array
     var l = _particlesArray.length, particle;
@@ -123,7 +127,7 @@ function Particle(px, py, psize, velX, velY){
 
         //ALGORITHM 6
         this.px += this.velX;
-        this.py += this.velY+9.81*t*0.4;
+        this.py += this.velY+9.81*t*0.6;
     }
 
     this.drawOnCanvasContext = function(context){
@@ -134,6 +138,31 @@ function Particle(px, py, psize, velX, velY){
         context.closePath();
     }
 }
+
+/*
+ Function: Firework
+ ========================
+ * Simulation of a OOP class
+ * Properties + Methods (functions)
+ */
+function Firework(){
+    //Ignition point
+    var fx = Math.random()*_canvas.width;
+    var fy = Math.random()*_canvas.height;
+
+    if(_particlesArray == null)
+        _particlesArray = [];//Like new Array();
+
+    var particle, psize = 4, velX, velY;
+    for(var i=0;i<50+Math.random()*450;i++){
+        velX = Math.random()*8-4;
+        velY = Math.random()*8-4;
+        particle = new Particle(fx, fy, psize, velX, velY);//Create a new Particle --> object
+
+        _particlesArray.push(particle);//Add particle to existing array
+    }
+}
+
 
 /*
  Function: UnitTestParticles
