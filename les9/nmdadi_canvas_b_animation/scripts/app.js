@@ -76,11 +76,14 @@ function animateCanvas(){
     if(_particlesArray == null)
         _particlesArray = [];//Like new Array();
     //Loop through Particles Array
-    var l = _particlesArray.length, particle;
-    for(var i=0;i<l;i++){
+    var particle;
+    for(var i=0;i<_particlesArray.length;i++){
         particle = _particlesArray[i];
         particle.update(new Date());
-        particle.drawOnCanvasContext(_canvasContext);//Draw on 2d Context of canvas
+        particle.drawOnCanvasContext(_canvasContext);//Draw on 2d Context of canvas    
+        $(particle).on('end', function(e){
+            removeParticleFromArray(this.id);
+        });
     }
 
     //Do a new animation --> 1/60s
@@ -94,7 +97,8 @@ function animateCanvas(){
  * Properties + Methods (functions)
  * Actions: Setup + Update + ReDraw
  */
-function Particle(px, py, psize, velX, velY, cr, cg, cb){
+function Particle(id, px, py, psize, velX, velY, cr, cg, cb){
+    this.id = id;
     this.px = px;
     this.py = py;
     this.psize = psize;
@@ -137,6 +141,9 @@ function Particle(px, py, psize, velX, velY, cr, cg, cb){
         
         //Adjust opacity --> uitdoven particle
         this.opacity = 1/Math.pow(t,3);
+        //Check if particle is ended his life
+        if(this.opacity < 0.05)
+            $(this).trigger('end');
     }
 
     this.drawOnCanvasContext = function(context){
@@ -145,7 +152,7 @@ function Particle(px, py, psize, velX, velY, cr, cg, cb){
         context.arc(this.px, this.py, this.psize, 0, Math.PI*2, true);
         context.fill();
         //Doing some weird stuff
-        context.strokeStyle = 'rgba(' + cr + ',' + cg + ',' + cb + ',0.26)';
+        context.strokeStyle = 'rgba(' + cr + ',' + cg + ',' + cb + ',' + this.opacity + ')';
         context.arc(this.px, this.py, this.psize*this.psize, 0, Math.PI*2, true);
         context.stroke();
         context.closePath();
@@ -173,7 +180,7 @@ function Firework(){
     for(var i=0;i<50+Math.random(450);i++){
         velX = Math.random()*8-4;
         velY = Math.random()*8-4;
-        particle = new Particle(fx, fy, psize, velX, velY, cr, cg, cb);//Create a new Particle --> object
+        particle = new Particle(pId, fx, fy, psize, velX, velY, cr, cg, cb);//Create a new Particle --> object
 
         _particlesArray.push(particle);//Add particle to existing array
 
@@ -203,10 +210,31 @@ function UnitTestParticles(){
         py = Math.random()*_canvas.height;
         velX = Math.random()*8-4;
         velY = Math.random()*8-4;
-        particle = new Particle(px, py, psize, velX, velY);//Create a new Particle --> object
+        particle = new Particle(pId, px, py, psize, velX, velY);//Create a new Particle --> object
 
         _particlesArray.push(particle);//Add particle to existing array
+        
+        pId++;
     }
+}
+
+/*
+ Function: removeParticleFromArray
+ ========================
+ * Remove certain particle from the active particles array
+ * Argument id: the ide of the particle
+ */
+function removeParticleFromArray(id){
+    var match = false, particle, i = 0;
+    while(!match && i < _particlesArray.length){
+        if(id === _particlesArray[i].id){
+            match = true;
+        }
+        else{
+            i++;
+        }                
+    }
+    _particlesArray.splice(i, 1);
 }
 
 /*
