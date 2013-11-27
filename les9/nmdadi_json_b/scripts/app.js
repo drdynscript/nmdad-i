@@ -1,6 +1,7 @@
 /*
     Make a new JSON file
     ====================
+
     DataTypes
     ---------
     1) Number
@@ -22,4 +23,8 @@
         enclosed by curly braces --> {...}
         key is always a string without backslash escaping
         separation between key and value by double point --> :
+
+    Validation
+    ----------
+    http://jsonlint.com/
 */
