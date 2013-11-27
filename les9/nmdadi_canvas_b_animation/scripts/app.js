@@ -105,6 +105,7 @@ function Particle(px, py, psize, velX, velY, cr, cg, cb){
     this.cr = cr;
     this.cg = cg;
     this.cb = cb;
+    this.opacity = 1;
 
     this.update = function(currentTime){
         //Time difference
@@ -127,23 +128,24 @@ function Particle(px, py, psize, velX, velY, cr, cg, cb){
          this.py += this.velY;*/
 
         //ALGORITHM 5
-        this.px += (this.velX/this.velY)/t;
-        this.py += this.velY*this.velX*t;
+        /*this.px += (this.velX/this.velY)/t;
+        this.py += this.velY*this.velX*t;*/
 
         //ALGORITHM 6
-        /*this.px += this.velX;
-        this.py += this.velY+9.81*t*0.6;*/
+        this.px += this.velX;
+        this.py += this.velY+9.81*t*0.6;
+        
+        //Adjust opacity --> uitdoven particle
+        this.opacity = 1/Math.pow(t,3);
     }
 
     this.drawOnCanvasContext = function(context){
         context.beginPath();
-        context.fillStyle = 'rgba(' + cr + ',' + cg + ',' + cb + ',0.26)';
+        context.fillStyle = 'rgba(' + cr + ',' + cg + ',' + cb + ',' + this.opacity + ')';
         context.arc(this.px, this.py, this.psize, 0, Math.PI*2, true);
         context.fill();
         //Doing some weird stuff
         context.strokeStyle = 'rgba(' + cr + ',' + cg + ',' + cb + ',0.26)';
-        context.moveTo(0,0);
-        context.lineTo(this.px,this.py);
         context.arc(this.px, this.py, this.psize*this.psize, 0, Math.PI*2, true);
         context.stroke();
         context.closePath();
@@ -168,7 +170,7 @@ function Firework(){
         _particlesArray = [];//Like new Array();
 
     var particle, psize = 4, velX, velY;
-    for(var i=0;i<50+Math.random()*450;i++){
+    for(var i=0;i<50+Math.random(450);i++){
         velX = Math.random()*8-4;
         velY = Math.random()*8-4;
         particle = new Particle(fx, fy, psize, velX, velY, cr, cg, cb);//Create a new Particle --> object
