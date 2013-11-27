@@ -73,7 +73,7 @@ function animateCanvas(){
     var l = _particlesArray.length, particle;
     for(var i=0;i<l;i++){
         particle = _particlesArray[i];
-        particle.update();
+        particle.update(new Date());
         particle.drawOnCanvasContext(_canvasContext);//Draw on 2d Context of canvas
     }
 
@@ -94,15 +94,36 @@ function Particle(px, py, psize, velX, velY){
     this.psize = psize;
     this.velX = velX;
     this.velY = velY;
+    this.startTime = new Date();//Snapshot in time --> current time
+    this.t = 0;//Time difference between current time and start time
 
-    this.update = function(){
+    this.update = function(currentTime){
+        //Time difference
+        t = (currentTime.getTime()- this.startTime.getTime())/1000;
+
         //ALGORITHM 1
-        this.px += 5*this.velX;
-        this.py += 5*this.velY;
+        /*this.px += 5*this.velX;
+        this.py += 5*this.velY;*/
 
         //ALGORITHM 2 SNOW STORM
         /*this.px += 5+this.velX;
         this.py += 5+this.velY;*/
+
+        //ALGORITHM 3
+        /*this.px += this.velX;
+        this.py += Math.pow(t, this.velY);*/
+
+        //ALGORITHM 4
+        /*this.px += this.velX*-1*t;
+         this.py += this.velY;*/
+
+        //ALGORITHM 5
+        /*this.px += (this.velX/this.velY)/t;
+        this.py += this.velY*this.velX*t;*/
+
+        //ALGORITHM 6
+        this.px += this.velX;
+        this.py += this.velY+9.81*t*0.4;
     }
 
     this.drawOnCanvasContext = function(context){

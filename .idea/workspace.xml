@@ -6,7 +6,7 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/index.html" changelist="cd0bdc94-f423-42b5-972c-7ca073a85b71" time="1385557003653" ignored="false" />
     <file path="/students.json" changelist="cd0bdc94-f423-42b5-972c-7ca073a85b71" time="1385541115558" ignored="false" />
-    <file path="/app.js" changelist="cd0bdc94-f423-42b5-972c-7ca073a85b71" time="1385561355295" ignored="false" />
+    <file path="/app.js" changelist="cd0bdc94-f423-42b5-972c-7ca073a85b71" time="1385562475846" ignored="false" />
     <file path="/app.css" changelist="cd0bdc94-f423-42b5-972c-7ca073a85b71" time="1385558039662" ignored="false" />
     <file path="/portfolio.json" changelist="cd0bdc94-f423-42b5-972c-7ca073a85b71" time="1385555500431" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -49,7 +49,7 @@
       <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/les9/nmdadi_canvas_b_animation/scripts/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="100" column="31" selection-start="2916" selection-end="2916" vertical-scroll-proportion="0.7730139">
+            <state line="124" column="21" selection-start="3626" selection-end="3626" vertical-scroll-proportion="0.041614123">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -438,7 +438,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/les9/nmdadi_canvas_b_animation/scripts/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="31" selection-start="2916" selection-end="2916" vertical-scroll-proportion="0.7730139">
+        <state line="124" column="21" selection-start="3626" selection-end="3626" vertical-scroll-proportion="0.041614123">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
