@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /components
+Disallow: /data
+Disallow: /scripts
+Disallow: /search
+Disallow: /signin
+Disallow: /styles
