@@ -90,11 +90,14 @@ function animateCanvas(){
     //Clear the canvas
     canvasContext.fillRect(0, 0, canvas.width, canvas.height);
 
+    //Get the current time
+    var currentTime = new Date();
+
     //Loop through the Particles Array
     var particle;
     for(var i=0;i<_particlesArray.length;i++){
         particle = _particlesArray[i];
-        particle.update();
+        particle.update(currentTime);
         particle.drawOnCanvasContext(canvasContext);
     }
 
@@ -117,10 +120,13 @@ function Particle(id, x, y, size, velX, velY, cr, cg, cb){
     this.cr = cr;
     this.cg = cg;
     this.cb = cb;
+    this.startTime = new Date();//Snapshot van de huidige tijd
+    this.t = 0;//Time difference
 
-    this.update = function(){
+    this.update = function(currentTime){
+        this.t = (currentTime.getTime() - this.startTime.getTime())/1000;
         this.x += this.velX;
-        this.y += this.velY;
+        this.y += this.velY+9.81*this.t;
     }
 
     this.drawOnCanvasContext = function(context){
