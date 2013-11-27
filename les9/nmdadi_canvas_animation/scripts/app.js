@@ -48,7 +48,7 @@ function initCanvas(){
             canvas.height = $(window).height();
             canvasContext = canvas.getContext('2d');//Get the 2d Context from the canvas object and assign to variable canvasContext
             //Start Animate the canvas via requestAnimFrame method (custom)
-            var particle, rx, ry, velX, velY, size, cr, cg, cb;
+            /*var particle, rx, ry, velX, velY, size, cr, cg, cb;
             for(var i=0;i<1000;i++){
                 rx = Math.random()*canvas.width;
                 ry = Math.random()*canvas.height;
@@ -65,7 +65,8 @@ function initCanvas(){
                     _particlesArray = [];
 
                 _particlesArray.push(particle);
-            }
+            }*/
+
             requestAnimFrame(animateCanvas);
         }
     }else{
@@ -73,7 +74,7 @@ function initCanvas(){
     }
 }
 
-var _particlesArray;
+var _particlesArray, pId = 0, fId = 0;
 
 /*
  Function: animateCanvas
@@ -106,6 +107,39 @@ function animateCanvas(){
 }
 
 /*
+ Function --> Simulate a Firework class
+ ======================================
+ Properties, methods (functions)
+ */
+function Firework(){
+    //Ignition point
+    var fx = Math.random()*canvas.width;
+    var fy = Math.random()*canvas.height;
+    //Properties for each particle
+    var psize = 1+Math.random()*3;
+    var cr = Math.round(Math.random()*255);
+    var cg = Math.round(Math.random()*255);
+    var cb = Math.round(Math.random()*255);
+    //Create particles
+    var l = 60+Math.round(Math.random()*540);
+    var particle;//declare a new particle variable
+    for(var i=0;i<l;i++){
+        particle = new Particle(pId, fx, fy, psize, Math.random()*8-4, Math.random()*8-4, cr, cg, cb);//create a new particle with certain argument values
+
+        if(_particlesArray == null)
+            _particlesArray = [];//create a new empty array
+
+        _particlesArray.push(particle);//add particle to array
+
+        pId++;//Unique index --> primary key
+    }
+    fId++;
+
+    $('#nfireworks span').html(fId + ' fireworks');
+    $('#nparticles span').html(pId + ' particles');
+}
+
+/*
     Function --> Simulate a Particle class
     ======================================
     Properties, methods (functions)
@@ -126,7 +160,8 @@ function Particle(id, x, y, size, velX, velY, cr, cg, cb){
     this.update = function(currentTime){
         this.t = (currentTime.getTime() - this.startTime.getTime())/1000;
         this.x += this.velX;
-        this.y += this.velY+9.81*this.t;
+        this.y += this.velY+9.81*this.t*0.4;
+        //this.y += Math.pow(this.t,this.velY);
     }
 
     this.drawOnCanvasContext = function(context){
@@ -158,6 +193,13 @@ function Particle(id, x, y, size, velX, velY, cr, cg, cb){
             canvas.width = $(window).width();
             canvas.height = $(window).height();
         }
+    });
+
+    //Listen to click event shoot firework
+    $('#sfirework').click(function(e){
+        e.preventDefault();
+        new Firework();
+        return false;
     });
 
     initCanvas();
