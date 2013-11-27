@@ -1,0 +1,60 @@
+﻿{
+    "students":[
+        {
+            "firstname":"Philippe",
+            "lastname":"De Pauw - Waterschoot",
+            "studentnumber":16235,
+            "genderfemale":false,
+            "addresses":[
+                {
+                    "street":"Industrieweg 232",
+                    "city":"Mariakerke",
+                    "postalcode":"9030",
+                    "state":"Oost-Vlaanderen",
+                    "country":"Belgium",
+                    "ishome":true
+                },
+                {
+                    "street":"Hoogpoort 15",
+                    "city":"Gent",
+                    "postalcode":"9000",
+                    "state":"Oost-Vlaanderen",
+                    "country":"Belgium",
+                    "ishome":false
+                }
+            ],
+            "emailaddresses":[
+                {
+                    "email":"philippe.depauw@arteveldehs.be",
+                    "isprivate":false
+                },
+                {
+                    "email":"mullah.omar@iran.usa",
+                    "isprivate":true
+                }
+            ]
+        },
+        {
+            "firstname":"Olivia",
+            "lastname":"Parent",
+            "studentnumber":20956,
+            "genderfemale":true,
+            "addresses":[
+                {
+                    "street":"Koekoekstraat 62A",
+                    "city":"Melle",
+                    "postalcode":"9090",
+                    "state":"Oost-Vlaanderen",
+                    "country":"Belgium",
+                    "ishome":true
+                }
+            ],
+            "emailaddresses":[
+                {
+                    "email":"olivier.parent@student.arteveldehs.be",
+                    "isprivate":false
+                }
+            ]
+        }
+    ]
+}
