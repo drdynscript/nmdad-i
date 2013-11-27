@@ -6,8 +6,8 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/index.html" changelist="cd0bdc94-f423-42b5-972c-7ca073a85b71" time="1385557003653" ignored="false" />
     <file path="/students.json" changelist="cd0bdc94-f423-42b5-972c-7ca073a85b71" time="1385541115558" ignored="false" />
-    <file path="/app.js" changelist="cd0bdc94-f423-42b5-972c-7ca073a85b71" time="1385557331307" ignored="false" />
-    <file path="/app.css" changelist="cd0bdc94-f423-42b5-972c-7ca073a85b71" time="1385549783880" ignored="false" />
+    <file path="/app.js" changelist="cd0bdc94-f423-42b5-972c-7ca073a85b71" time="1385560105991" ignored="false" />
+    <file path="/app.css" changelist="cd0bdc94-f423-42b5-972c-7ca073a85b71" time="1385558039662" ignored="false" />
     <file path="/portfolio.json" changelist="cd0bdc94-f423-42b5-972c-7ca073a85b71" time="1385555500431" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,39 +29,30 @@
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/les9/nmdadi_json_b/index.html">
+        <entry file="file://$PROJECT_DIR$/les9/nmdadi_canvas_b_animation/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="18" selection-start="2253" selection-end="2253" vertical-scroll-proportion="-8.5">
+            <state line="41" column="16" selection-start="2904" selection-end="2904" vertical-scroll-proportion="14.538462">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="portfolio.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/les9/nmdadi_json_b/data/portfolio.json">
+      <file leaf-file-name="app.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/les9/nmdadi_canvas_b_animation/styles/app.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="25" selection-start="1254" selection-end="1254" vertical-scroll-proportion="5.769231">
+            <state line="15" column="7" selection-start="290" selection-end="290" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/les9/nmdadi_json_b/scripts/app.js">
+        <entry file="file://$PROJECT_DIR$/les9/nmdadi_canvas_b_animation/scripts/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="23" selection-start="1680" selection-end="1696" vertical-scroll-proportion="0.7692308">
+            <state line="108" column="45" selection-start="2989" selection-end="2989" vertical-scroll-proportion="0.43253466">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/les9/nmdadi_json_b/styles/app.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -87,6 +78,9 @@
         <option value="$PROJECT_DIR$/les9/nmdadi_json_b/data/portfolio.json" />
         <option value="$PROJECT_DIR$/les9/nmdadi_json_b/index.html" />
         <option value="$PROJECT_DIR$/les9/nmdadi_json_b/scripts/app.js" />
+        <option value="$PROJECT_DIR$/les9/nmdadi_canvas_b_animation/index.html" />
+        <option value="$PROJECT_DIR$/les9/nmdadi_canvas_b_animation/styles/app.css" />
+        <option value="$PROJECT_DIR$/les9/nmdadi_canvas_b_animation/scripts/app.js" />
       </list>
     </option>
   </component>
@@ -153,8 +147,22 @@
               <option name="myItemId" value="les9" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="nmdadi_json_b" />
+              <option name="myItemId" value="nmdad-i" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nmdad-i" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="les9" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nmdadi_canvas_b_animation" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -172,7 +180,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="nmdadi_json_b" />
+              <option name="myItemId" value="nmdadi_canvas_b_animation" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -194,7 +202,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="nmdadi_json_b" />
+              <option name="myItemId" value="nmdadi_canvas_b_animation" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -216,25 +224,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="nmdadi_json_b" />
+              <option name="myItemId" value="nmdadi_canvas_b_animation" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nmdad-i" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nmdad-i" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="les9" />
+              <option name="myItemId" value="content" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -405,13 +399,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/les9/nmdadi_json_b/data/portfolio.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="25" selection-start="1254" selection-end="1254" vertical-scroll-proportion="5.769231">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/les9/nmdadi_json_b/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="30" column="18" selection-start="2253" selection-end="2253" vertical-scroll-proportion="-8.5">
@@ -421,7 +408,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/les9/nmdadi_json_b/scripts/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="23" selection-start="1680" selection-end="1696" vertical-scroll-proportion="0.7692308">
+        <state line="61" column="13" selection-start="1502" selection-end="1502" vertical-scroll-proportion="0.5044136">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/les9/nmdadi_json_b/data/portfolio.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="13" selection-start="1417" selection-end="1417" vertical-scroll-proportion="0.2607562">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/les9/nmdadi_canvas_b_animation/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="16" selection-start="2904" selection-end="2904" vertical-scroll-proportion="14.538462">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/les9/nmdadi_canvas_b_animation/styles/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="7" selection-start="290" selection-end="290" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/les9/nmdadi_canvas_b_animation/scripts/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="108" column="45" selection-start="2989" selection-end="2989" vertical-scroll-proportion="0.43253466">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>

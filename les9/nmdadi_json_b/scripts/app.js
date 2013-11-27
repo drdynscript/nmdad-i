@@ -59,7 +59,7 @@ function vizPortfolio(){
         + '<p>' + item.body + '</p>'
         + '</div>';
     });
-    html += '</ul>';
+    html += '';
 
     $('#portfolio').html(html);//Assign the value of html object to speciwfied html element --> #portfolio
     $('#portfolio').accordion();//Accordion Jquery UI
