@@ -52,16 +52,17 @@ App: Smartwatch
     top:72px;
     height:48px;
     width:48px;
-    background:rgba(255,255,0,1);
+    background:url('images/compass.png');
+    background-size:48px 48px;
     left:76px;
 }
 .clock-compass-indicator{
     position:absolute;
     top:6px;
     height:36px;
-    width:8px;
-    background:rgba(0,0,0,1);
-    left:20px;
+    width:2px;
+    background: rgba(255, 69, 10, 1);
+    left:24px;
     -webkit-transform-origin:center center;
     -moz-transform-origin:center center;
     -o-transform-origin:center center;
