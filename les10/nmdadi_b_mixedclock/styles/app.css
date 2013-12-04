@@ -1,0 +1,75 @@
+/*
+App: Smartwatch
+===============
+* Parts of time viz
+* Compass
+*/
+
+.clock{
+    position:relative;
+    width:200px;
+    height:200px;
+    overflow:hidden;
+    -webkit-transform-origin:center center;
+    -moz-transform-origin:center center;
+    -o-transform-origin:center center;
+    -ms-transform-origin:center center;
+    transform-origin:center center;
+}
+.clock-indicator{
+    position:absolute;
+    width:30px;
+    height:60px;
+    display:block;
+    background:rgba(0,0,0,0.86);
+    left:3px;
+    top:0;
+    line-height:60px;
+    font-size:28px;
+    color:rgba(255,255,255,1);
+    text-align:center;
+}
+.clock-indicator.clock-indicator-hours.led1{
+    left:3px;
+}
+.clock-indicator.clock-indicator-hours.led0{
+    left:36px;
+}
+.clock-indicator.clock-indicator-minutes.led1{
+    left:69px;
+}
+.clock-indicator.clock-indicator-minutes.led0{
+    left:102px;
+}
+.clock-indicator.clock-indicator-seconds.led1{
+    left:135px;
+}
+.clock-indicator.clock-indicator-seconds.led0{
+    left:168px;
+}
+.clock-compass{
+    position:absolute;
+    top:72px;
+    height:48px;
+    width:48px;
+    background:rgba(255,255,0,1);
+    left:76px;
+}
+.clock-compass-indicator{
+    position:absolute;
+    top:6px;
+    height:36px;
+    width:8px;
+    background:rgba(0,0,0,1);
+    left:20px;
+    -webkit-transform-origin:center center;
+    -moz-transform-origin:center center;
+    -o-transform-origin:center center;
+    -ms-transform-origin:center center;
+    transform-origin:center center;
+    -webkit-transform:rotate(0deg);
+    -moz-transform:rotate(0deg);
+    -o-transform:rotate(0deg);
+    -ms-transform:rotate(0deg);
+    transform:rotate(0deg);
+}
