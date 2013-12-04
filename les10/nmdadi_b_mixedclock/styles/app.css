@@ -15,6 +15,7 @@ App: Smartwatch
     -o-transform-origin:center center;
     -ms-transform-origin:center center;
     transform-origin:center center;
+    left:0;
 }
 .clock-indicator{
     position:absolute;

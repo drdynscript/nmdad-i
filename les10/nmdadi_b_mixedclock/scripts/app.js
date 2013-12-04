@@ -65,7 +65,18 @@ function startClock(containerId){
     $(containerId + ' .clock-compass .clock-compass-indicator').css('-ms-transform', 'rotate(' + secondsDegrees + 'deg)');
     $(containerId + ' .clock-compass .clock-compass-indicator').css('transform', 'rotate(' + secondsDegrees + 'deg)');
 
-    //$(containerId).css('-webkit-transform', 'scale(' + secondsDegrees/6 + ')');
+    var l = $(containerId).css('left');
+    var il = parseFloat(l.substring(0, l.indexOf('px')));
+    var speed = parseFloat($(containerId).data('speed'));
+
+    if(il+speed >= 0 && il+speed <= $(window).width()-$(containerId).width()){
+        il += speed;
+    }
+    else{
+        speed *= -1;
+    }
+    $(containerId).data('speed', speed);
+    $(containerId).css('left', il+'px');
 }
 
 //Self executing function
