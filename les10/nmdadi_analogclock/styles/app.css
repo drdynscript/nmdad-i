@@ -1,0 +1,60 @@
+/*
+Analog Clock Settings
+*/
+.clock{
+    position:relative;
+    height:200px;
+    overflow:hidden;
+    background:rgba(0,0,0,0.46);
+    border:3px dotted rgba(0,0,0,0.68);
+}
+.clock-background{
+    position:absolute;
+    width:200px;
+    height:200px;
+    top:0;
+    left:0;
+    display:block;
+    background:url('images/clock.png');
+    background-size:200px 200px;
+}
+.clock-pointer{
+    position:absolute;
+    top:0;
+    left:100px;
+    background:rgba(0,0,0,1);
+    -webkit-transform-origin:center bottom;
+    -moz-transform-origin:center bottom;
+    -o-transform-origin:center bottom;
+    -ms-transform-origin:center bottom;
+    transform-origin:center bottom;
+}
+.clock-pointer-seconds{
+    width:2px;
+    height:100px;
+    -webkit-transform:rotate(90deg);
+    -moz-transform:rotate(90deg);
+    -o-transform:rotate(90deg);
+    -ms-transform:rotate(90deg);
+    transform:rotate(90deg);
+}
+.clock-pointer-minutes{
+    width:4px;
+    height:72px;
+    top:28px;
+    -webkit-transform:rotate(60deg);
+    -moz-transform:rotate(60deg);
+    -o-transform:rotate(60deg);
+    -ms-transform:rotate(60deg);
+    transform:rotate(60deg);
+}
+.clock-pointer-hours{
+    width:6px;
+    height:36px;
+    top:64px;
+    -webkit-transform:rotate(30deg);
+    -moz-transform:rotate(30deg);
+    -o-transform:rotate(30deg);
+    -ms-transform:rotate(30deg);
+    transform:rotate(30deg);
+}
