@@ -77,6 +77,7 @@ function startClock(containerId){
     }
     $(containerId).data('speed', speed);
     $(containerId).css('left', il+'px');
+    $(containerId).css('-webkit-transform', 'rotate(' + secondsDegrees + 'deg)');
 }
 
 //Self executing function
