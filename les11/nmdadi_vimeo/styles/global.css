@@ -198,8 +198,10 @@ textarea {
 /* ==============================================
    RESPONSIVE STYLES
    ============================================== */
+html{
+    background:#fefefe;
+}
 body{
-    background:#ddd;
 }
 .wrapper{
     margin:0;
@@ -230,6 +232,9 @@ body{
 }
 .row:after{
     clear:both;
+}
+.row .row{
+    margin:0 -1.041666% !important;
 }
 .col{
     float:left;
@@ -340,9 +345,28 @@ body{
 /* ==============================================
    HEADER STYLES
    ============================================== */
-#header-wrapper{
+#ribbon{
+    background: url('images/bg_header.png') repeat-x top left;
+    display: block;
+    height: 10px;
+    z-index:999;
+    position:relative;
 }
-#header{
+#header-wrapper{
+    background: #f0f1f4;
+    border-bottom: 1px solid #d8dde1;
+    z-index:999;
+    position:relative;
+}
+#header h1{
+    margin:0;
+}
+#header h1 a{
+    text-indent:-999em;
+    background:url('images/logo.svg') no-repeat;
+    width:140px;
+    height:40px;
+    display:block;
 }
 
 /* ==============================================
